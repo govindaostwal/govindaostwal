@@ -1,10 +1,50 @@
-- 👋 Hi, I’m @govindaostwal, a Full stack java developer who converts business requirement into a solid web application.
-- 👀 I’m interested in web app developments.
-- 🌱 I’m currently learning Azure,AI and machine learning.
-- 💞️ I’m looking to collaborate on opensource java frameworks. 
-- 📫 How to reach me ... govindaostwal@gmail.com
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <localRepository/>
+  <interactiveMode/>
+  <usePluginRegistry/>
+  <offline/>
 
-<!---
-govindaostwal/govindaostwal is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+  <profiles>
+  <profile>
+    <id>maven-https</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+			</repository>
+    <repository>
+        <id>internal-repo</id>
+        <name>internal repository</name>
+        <url>https://my/private/repo</url>
+        <layout>default</layout>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories> 
+</profile>
+  </profiles>
+
+  <activeProfiles/>
+  <pluginGroups/>
+</settings>
